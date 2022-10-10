@@ -1,0 +1,15 @@
+name: app CI
+on: push
+jobs:
+  code-check:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: repo cloning
+        uses: actions/checkout@v3
+      - name: deps installation
+        run: npm ci
+      - name: linting
+        run: npm run lint
