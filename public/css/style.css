@@ -46,6 +46,31 @@ body {
   border-bottom: 3px solid #4bb;
 }
 
+.lang-switcher {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.lang-switcher__item {
+  display: inline-block;
+  vertical-align: baseline;
+  border-right: 1px solid #777;
+}
+
+.lang-switcher__item:last-child {
+  border-right: none;
+}
+
+.lang-switcher__button,
+.lang-switcher__button:focus {
+  color: inherit;
+}
+
+.lang-switcher__button:hover {
+  color: #777;
+}
+
 .main {
   border-bottom: 3px solid #4bb;
 }
