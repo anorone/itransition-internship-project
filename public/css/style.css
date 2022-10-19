@@ -46,10 +46,19 @@ body {
   border-bottom: 3px solid #4bb;
 }
 
+.header__inner {
+  display: flex;
+  align-items: center;
+}
+
 .lang-switcher {
   margin: 0;
   padding: 0;
   list-style: none;
+}
+
+.header__lang-switcher {
+  margin-right: 40px;
 }
 
 .lang-switcher__item {
@@ -69,6 +78,10 @@ body {
 
 .lang-switcher__button:hover {
   color: #777;
+}
+
+.theme-switcher {
+  background-color: #777;
 }
 
 .main {

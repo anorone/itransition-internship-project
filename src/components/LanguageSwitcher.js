@@ -1,7 +1,7 @@
 import { Button } from 'antd';
 
 const LanguageSwitcher = () => (
-  <ul className="lang-switcher">
+  <ul className="lang-switcher header__lang-switcher">
     <li className="lang-switcher__item">
       <Button className="lang-switcher__button" type="text">EN</Button>
     </li>
