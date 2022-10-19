@@ -6,10 +6,18 @@ body {
   display: grid;
   grid-template-rows: auto 1fr max-content;
   height: inherit;
-  color: #dcdcdc;
   font-size: 18px;
   font-family: 'Segoe UI', 'Helvetica', sans-serif;
+}
+
+.dark-theme {
+  color: #dcdcdc;
   background-color: #323232;
+}
+
+.light-theme {
+  color: #424242;
+  background-color: #efefef;
 }
 
 *,
