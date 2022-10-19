@@ -10,12 +10,12 @@ body {
   font-family: 'Segoe UI', 'Helvetica', sans-serif;
 }
 
-.dark-theme {
+.dark {
   color: #dcdcdc;
   background-color: #323232;
 }
 
-.light-theme {
+.light {
   color: #424242;
   background-color: #efefef;
 }
@@ -96,8 +96,8 @@ body {
   margin-left: auto;
 }
 
-.light-theme .search-form input,
-.light-theme .search-form button {
+.light .search-form input,
+.light .search-form button {
   border: 1px solid #777;
   color: inherit;
 }
