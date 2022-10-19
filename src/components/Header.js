@@ -1,6 +1,6 @@
 import LanguageSwitcher from './LanguageSwitcher';
 import ThemeSwitcher from './ThemeSwitcher';
-// import SearchForm from './SearchForm';
+import SearchForm from './SearchForm';
 
 const Header = () => (
   <header className="header">
@@ -8,7 +8,7 @@ const Header = () => (
       <div className="header__inner">
         <LanguageSwitcher />
         <ThemeSwitcher />
-        {/* <SearchForm /> */}
+        <SearchForm />
       </div>
     </div>
   </header>

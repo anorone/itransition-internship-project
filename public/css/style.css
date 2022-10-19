@@ -92,6 +92,16 @@ body {
   background-color: #777;
 }
 
+.search-form {
+  margin-left: auto;
+}
+
+.light-theme .search-form input,
+.light-theme .search-form button {
+  border: 1px solid #777;
+  color: inherit;
+}
+
 .main {
   border-bottom: 3px solid #4bb;
 }
