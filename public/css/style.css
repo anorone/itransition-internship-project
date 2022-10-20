@@ -10,6 +10,10 @@ body {
   font-family: 'Segoe UI', 'Helvetica', sans-serif;
 }
 
+a:link {
+  color: #4bb;
+}
+
 .dark {
   color: #dcdcdc;
   background-color: #323232;
@@ -135,8 +139,23 @@ body {
   background-repeat: no-repeat;
 }
 
-.footer__quote {
-  margin: 0;
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.auth-form__radio-group {
+  margin-bottom: 16px;
+}
+
+.banner__auth-form {
+  margin-top: 8px;
+}
+
+.auth-form__message {
   font-size: 16px;
 }
 
