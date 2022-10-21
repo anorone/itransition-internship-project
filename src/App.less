@@ -182,8 +182,17 @@ a:visited {
   border-bottom: none;
 }
 
-.section:empty::before {
+.section__inner {
+  padding-top: 25px;
+}
+
+.section__inner:empty::before {
   content: "There's nothing here yet.";
+}
+
+.items-list,
+.colls-list {
+  color: inherit;
 }
 
 .footer {
@@ -196,4 +205,12 @@ a:visited {
   margin: 0;
   font-size: 16px;
   font-weight: 700;
+}
+
+// Ant override.
+
+.ant-empty-description,
+.ant-list-empty-text,
+.ant-empty-normal {
+  color: inherit;
 }
