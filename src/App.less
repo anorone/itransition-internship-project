@@ -234,20 +234,41 @@ a:visited {
   margin-bottom: 10px;
 }
 
-.light .item {
-  border-color: #dcdcdc;
+.coll {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: inherit;
 }
 
-.light .item__name {
-  color: #676767;
+.coll__name {
+  margin-top: 10px;
+  color: #dcdcdc;
+  font-weight: 700;
 }
 
-.light .item__collection {
-  color: #3aa;
+.coll__image {
+  background-color: #323232;
+  object-fit: cover;
 }
 
-.light .item__info {
-  color: #424242;
+.coll__link {
+  margin-top: 10px;
+  background-color: #2aa;
+}
+
+
+.coll__link:hover,
+.coll__link:focus {
+  background-color: #42b8b4;
+}
+
+.coll__link:active {
+  background-color: #148185;
+}
+
+.coll__link span {
+  color: #fff;
 }
 
 .footer {
@@ -293,4 +314,16 @@ a:visited {
 .ant-list-empty-text,
 .ant-empty-normal {
   color: inherit;
+}
+
+.coll .ant-image {
+  order: -1;
+}
+
+.dark .ant-statistic-title {
+  color: rgba(255, 255, 255, .45);
+}
+
+.dark .ant-statistic-content {
+  color: rgba(255, 255, 255, .85);
 }
