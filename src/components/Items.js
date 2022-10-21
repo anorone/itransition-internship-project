@@ -3,7 +3,7 @@ import Item from './Item';
 
 const items = [
   {
-    id: 1,
+    id: 3,
     name: 'Чума',
     description: 'Роман французского писателя Альбера Камю.',
     url: '/files/peste.jpg',
@@ -21,7 +21,7 @@ const items = [
     createdOn: '19-10-2022',
   },
   {
-    id: 3,
+    id: 1,
     name: 'Первый человек',
     description: 'Неоконченный автобиографический роман Альбера Камю.',
     url: '/files/premier.jpg',
