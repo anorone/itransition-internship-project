@@ -5,6 +5,20 @@ import App from '../App';
 import ThemeSwitcher from '../components/ThemeSwitcher';
 
 test('color themes are switching properly', () => {
+  Object.defineProperty(window, 'matchMedia', {
+    writable: true,
+    value: jest.fn().mockImplementation(query => ({
+      matches: false,
+      media: query,
+      onchange: null,
+      addListener: jest.fn(),
+      removeListener: jest.fn(),
+      addEventListener: jest.fn(),
+      removeEventListener: jest.fn(),
+      dispatchEvent: jest.fn(),
+    })),
+  });
+
   render(<App />);
   render(<ThemeSwitcher />);
   const app = document.querySelector('.dark');
