@@ -1,6 +1,6 @@
 const Item = ({ props: { id, name, description, url, collection, owner, createdOn }}) => (
   <div className="item">
-    <h2 className="item__name">{name}</h2>
+    <h3 className="item__name">{name}</h3>
     <a className="item__link" href={`/items?id=${id}`}>
       <img className="item__image" src={url} alt={description} width="180" height="180" />
     </a>
