@@ -12,6 +12,11 @@ body {
   font-family: 'Segoe UI', 'Helvetica', sans-serif;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 a:link {
   color: #6dd;
 }
@@ -193,6 +198,58 @@ a:visited {
 .items-list,
 .colls-list {
   color: inherit;
+}
+
+.item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: content-box;
+  min-height: 180px;
+  padding-left: 200px;
+  padding-right: 10px;
+  border: 1px solid #777;
+  border-radius: 5px;
+  color: #dcdcdc;
+  text-align: left;
+  box-shadow: 0 0 5px #777;
+}
+
+.item__name {
+  margin: 15px 0;
+  color: #dcdcdc;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 1;
+}
+
+.item__link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #323232;
+}
+
+.item__image {
+  height: 180px;
+  object-fit: cover;
+}
+
+.item__info {
+  margin-top: auto;
+  margin-bottom: 10px;
+}
+
+.light .item__name {
+  color: #777;
+}
+
+.light .item__collection {
+  color: #3aa;
+}
+
+.light .item__info {
+  color: #424242;
 }
 
 .footer {
