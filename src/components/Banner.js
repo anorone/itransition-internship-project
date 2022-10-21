@@ -5,8 +5,8 @@ const Banner = () => (
     <h1 className="sr-only">
       Collection Manager - your ultimate solution for managing favorite collections.
     </h1>
-    <h2 className="heading heading_size_l text">Create, manage, share</h2>
-    <p className="heading heading_size_m text">everything from a single place</p>
+    <h2 className="heading heading_size_l">Create, manage, share</h2>
+    <p className="heading heading_size_m">everything from a single place</p>
     <AuthenticationForm />
   </section>
 );
