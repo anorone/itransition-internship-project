@@ -23,7 +23,7 @@ const collections = [
     name: 'Elite French cognac',
     description: 'Никогда не открывал - нравится ощущение обладания.',
     type: 'Алкогольные напитки',
-    url: '/files/cognac.webp',
+    url: '/files/cognac.jpg',
     volume: 11
   },
   {
