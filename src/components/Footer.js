@@ -1,8 +1,10 @@
+import { FormattedMessage } from "react-intl";
+
 const Footer = () => (
   <footer className="footer">
     <div className="container">
       <p className="footer__quote">
-        Collecting means being able to live in the past. (Albert Camus)
+        <FormattedMessage id="footer.quote" />
       </p>
     </div>
   </footer>

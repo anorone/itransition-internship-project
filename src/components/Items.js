@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'react-intl';
 import { List } from 'antd';
 import Item from './Item';
 
@@ -33,7 +34,9 @@ const items = [
 
 const Items = () => (
   <section className="section">
-    <h2 className="heading heading_size_s">Recently added</h2>
+    <h2 className="heading heading_size_s">
+      <FormattedMessage id="main.items.heading" />
+    </h2>
     <div className="section__inner">
       <List
         className="items-list"

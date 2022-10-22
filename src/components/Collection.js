@@ -1,4 +1,5 @@
 import { Image, Statistic, Button } from 'antd';
+import { FormattedMessage } from 'react-intl';
 
 const Collection = ({ props: { id, name, url, volume }}) => (
   <div className="coll">
@@ -15,7 +16,7 @@ const Collection = ({ props: { id, name, url, volume }}) => (
       size="large" 
       shape="round"
     >
-      View
+      <FormattedMessage id="main.collections.link" />
     </Button>
   </div>
 );

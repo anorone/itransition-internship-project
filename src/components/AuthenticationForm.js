@@ -1,6 +1,7 @@
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { Radio, Input, Button } from 'antd';
 import { useState } from 'react';
+import { FormattedMessage } from 'react-intl';
 
 const Banner = () => {
   const [authType, setAuthType] = useState('login');
@@ -15,9 +16,11 @@ const Banner = () => {
   return (
     <form className="auth-form banner__auth-form" method="post" action={authType}>
       <p className="auth-form__message">
-        Register a new account if you're a newcomer here or just
-        <a href="/signup" onClick={handleLinkClick}> Sign up </a>
-        if you already have an account
+        <FormattedMessage id="main.banner.form-message.start" />
+        <a href="/signup" onClick={handleLinkClick}>
+          <FormattedMessage id="main.banner.form-message.link" />
+        </a>
+        <FormattedMessage id="main.banner.form-message.end" />
       </p>
 
       <Radio.Group

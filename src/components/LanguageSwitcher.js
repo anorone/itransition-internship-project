@@ -1,12 +1,12 @@
 import { Button } from 'antd';
 
-const LanguageSwitcher = () => (
+const LanguageSwitcher = ({ setLanguage }) => (
   <ul className="lang-switcher header__lang-switcher">
     <li className="lang-switcher__item">
-      <Button className="lang-switcher__button" type="text">EN</Button>
+      <Button className="lang-switcher__button" type="text" onClick={() => setLanguage('en')}>EN</Button>
     </li>
     <li className="lang-switcher__item">
-      <Button className="lang-switcher__button" type="text">RU</Button>
+      <Button className="lang-switcher__button" type="text" onClick={() => setLanguage('ru')}>RU</Button>
     </li>
   </ul>
 );

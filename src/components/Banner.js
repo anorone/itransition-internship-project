@@ -1,3 +1,4 @@
+import { FormattedMessage } from 'react-intl';
 import AuthenticationForm from './AuthenticationForm';
 
 const Banner = () => (
@@ -5,8 +6,12 @@ const Banner = () => (
     <h1 className="sr-only">
       Collection Manager - your ultimate solution for managing favorite collections.
     </h1>
-    <h2 className="heading heading_size_l">Create, manage, share</h2>
-    <p className="heading heading_size_m">everything from a single place</p>
+    <h2 className="heading heading_size_l">
+      <FormattedMessage id="main.banner.heading-size-l" />
+    </h2>
+    <p className="heading heading_size_m">
+      <FormattedMessage id="main.banner.heading-size-m" />
+    </p>
     <AuthenticationForm />
   </section>
 );
