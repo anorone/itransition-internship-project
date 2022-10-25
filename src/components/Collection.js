@@ -7,7 +7,11 @@ const Collection = ({ props: { id, name, url, volume }}) => (
     
     <Image className="coll__image" src={url} alt={name} width={160} height={160} />
 
-    <Statistic className="coll__volume" title="Volume" value={volume} />
+    <Statistic
+      className="coll__volume"
+      title=<FormattedMessage id="main.collections.stat" />
+      value={volume}
+    />
 
     <Button 
       className="coll__link" 

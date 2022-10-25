@@ -1,3 +1,5 @@
+import { FormattedMessage } from 'react-intl';
+
 const Item = ({ props: { id, name, description, url, collection, owner, createdOn }}) => (
   <div className="item">
     <h3 className="item__name">{name}</h3>
@@ -8,9 +10,9 @@ const Item = ({ props: { id, name, description, url, collection, owner, createdO
       {collection.name}
     </a>
     <p className="item__info">
-      Added by '{owner}'
+      <FormattedMessage id="main.items.info.start" /> '{owner}'
       <br />
-      on {createdOn}
+      <FormattedMessage id="main.items.info.end" /> {createdOn}
     </p>
   </div>
 );

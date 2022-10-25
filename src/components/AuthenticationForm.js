@@ -31,8 +31,12 @@ const Banner = () => {
         size="small"
         onChange={handleRadioChange}
       >
-        <Radio.Button value="login">Sign in</Radio.Button>
-        <Radio.Button value="signup">Sign up</Radio.Button>
+        <Radio.Button value="login">
+          <FormattedMessage id="main.banner.auth-form.login"/>
+        </Radio.Button>
+        <Radio.Button value="signup">
+          <FormattedMessage id="main.banner.auth-form.signup"/>
+        </Radio.Button>
       </Radio.Group>
 
       <Input
@@ -50,7 +54,7 @@ const Banner = () => {
       />
 
       <Button type="primary" htmlType="submit" size="large" block>
-        {authType === 'login' ? 'Sign in' : 'Sign up'}
+        <FormattedMessage id={`main.banner.auth-form.${authType}`} />
       </Button>
     </form>
   );
