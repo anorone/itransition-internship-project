@@ -2,7 +2,6 @@
 
 import { render, fireEvent } from '@testing-library/react';
 import App from '../App';
-import ThemeSwitcher from '../components/ThemeSwitcher';
 
 test('color themes are switching properly', () => {
   Object.defineProperty(window, 'matchMedia', {
@@ -20,7 +19,6 @@ test('color themes are switching properly', () => {
   });
 
   render(<App />);
-  render(<ThemeSwitcher />);
   const app = document.querySelector('.dark');
   const themeSwitcher = document.querySelector('.theme-switcher');
 
