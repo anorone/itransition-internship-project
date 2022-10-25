@@ -1,14 +1,6 @@
-const { readFileSync } = require('fs');
-const { join } = require('path');
+const collections = require('./temp/collections');
+const items = require('./temp/items');
 const sortBy = require('lodash/sortBy');
-
-const readJSON = (name) => {
-  const path = join(__dirname, 'temp', `${name}.json`);
-  return readFileSync(path);
-};
-
-const collections = JSON.parse(readJSON('collections'));
-const items = JSON.parse(readJSON('items'));
 
 exports.handler = async function (request) {
   const { queryStringParameters: { from, limit } } = request;
