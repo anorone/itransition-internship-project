@@ -2,7 +2,7 @@ const collections = require('./temp/collections');
 const items = require('./temp/items');
 const sortBy = require('lodash/sortBy');
 
-exports.handler = async function (request) {
+exports.handler = async (request) => {
   const { queryStringParameters: { from, limit } } = request;
   if (from === 'items') {
     const result = sortBy(items, (item) => Date.parse(item.createdOn)).reverse();
