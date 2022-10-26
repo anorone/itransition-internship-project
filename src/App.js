@@ -21,7 +21,7 @@ const App = () => {
   return (
     <BrowserRouter>
       <IntlProvider locale={language} messages={messages[language]} >
-        <div className={theme}>
+        <div className={`${theme} app`}>
           <Header toggleThemes={toggleThemes} setLanguage={setLanguage} />
           <Main />
           <Footer />

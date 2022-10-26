@@ -5,8 +5,6 @@ html {
 }
 
 body {
-  display: grid;
-  grid-template-rows: auto 1fr max-content;
   height: inherit;
   font-size: 18px;
   font-family: 'Segoe UI', 'Helvetica', sans-serif;
@@ -33,6 +31,12 @@ a:visited {
 .light {
   color: #424242;
   background-color: #efefef;
+}
+
+.app {
+  display: grid;
+  grid-template-rows: auto 1fr max-content;
+  min-height: 100%;
 }
 
 *,
