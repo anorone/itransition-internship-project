@@ -10,7 +10,7 @@ const items = [
     createdOn: "2022-10-12",
   },
   {
-    id: 1,
+    id: 2,
     name: "Носки серые",
     description: "",
     tags: [],
