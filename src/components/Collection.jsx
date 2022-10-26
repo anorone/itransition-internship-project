@@ -1,5 +1,6 @@
-import { Image, Statistic, Button } from 'antd';
+import { Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
+import { Image, Statistic, Button } from 'antd';
 
 const Collection = ({ props: { id, name, url, volume }}) => (
   <div className="coll">
@@ -13,15 +14,16 @@ const Collection = ({ props: { id, name, url, volume }}) => (
       value={volume}
     />
 
-    <Button 
-      className="coll__link" 
-      href={`/collections/id=${id}`} 
-      type="link" 
-      size="large" 
-      shape="round"
-    >
-      <FormattedMessage id="main.collections.link" />
-    </Button>
+    <Link to={`/collection/${id}`} >
+      <Button 
+        className="coll__link" 
+        type="link" 
+        size="large" 
+        shape="round"
+      >
+        <FormattedMessage id="main.collections.link" />
+      </Button>
+    </Link>
   </div>
 );
 

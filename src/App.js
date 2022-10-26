@@ -1,5 +1,6 @@
 import './App.less';
 import { useState } from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import { IntlProvider } from 'react-intl';
 import Header from './components/Header';
 import Main from './components/Main';
@@ -18,13 +19,15 @@ const App = () => {
   const toggleThemes = () => setTheme(theme === 'dark' ? 'light' : 'dark');
 
   return (
-    <IntlProvider locale={language} messages={messages[language]} >
-      <div className={theme}>
-        <Header toggleThemes={toggleThemes} setLanguage={setLanguage} />
-        <Main />
-        <Footer />
-      </div>
-    </IntlProvider>
+    <BrowserRouter>
+      <IntlProvider locale={language} messages={messages[language]} >
+        <div className={theme}>
+          <Header toggleThemes={toggleThemes} setLanguage={setLanguage} />
+          <Main />
+          <Footer />
+        </div>
+      </IntlProvider>
+    </BrowserRouter>
   );
 };
 
