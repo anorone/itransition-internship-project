@@ -5,7 +5,7 @@ const items = [
     description: "",
     tags: [],
     url: "",
-    collection: { "id": 4, "name": "Носки", owner: "superuser" },
+    collection: { id: 4, name: "Носки", owner: "superuser" },
     createdOn: "2022-10-12",
   },
   {
@@ -14,7 +14,7 @@ const items = [
     description: "",
     tags: [],
     url: "",
-    collection: { "id": 4, "name": "Носки", owner: "superuser" },
+    collection: { id: 4, name: "Носки", owner: "superuser" },
     createdOn: "2022-10-12",
   },
   {
@@ -23,7 +23,7 @@ const items = [
     description: "Неоконченный автобиографический роман Альбера Камю.",
     tags: ["биография", "Камю"],
     url: "/files/premier.jpg",
-    collection: { "id": 5, "name": "Книги Альбера Камю", owner: "superuser" },
+    collection: { id: 5, name: "Книги Альбера Камю", owner: "superuser" },
     createdOn: "2022-10-14",
   },
   {
@@ -32,7 +32,7 @@ const items = [
     description: "Дебютный роман Альбера Камю.",
     tags: ["камю", "французская литература"],
     url: "/files/etranger.jpg",
-    collection: { "id": 5, "name": "Книги Альбера Камю", owner: "superuser" },
+    collection: { id: 5, name: "Книги Альбера Камю", owner: "superuser" },
     createdOn: "2022-10-19",
   },
   {
@@ -41,7 +41,7 @@ const items = [
     description: "Роман французского писателя Альбера Камю.",
     tags: ["книги", "Камю", "классика", "популярное", "литература"],
     url: "/files/peste.jpg",
-    collection: { "id": 5, "name": "Книги Альбера Камю", owner: "superuser" },
+    collection: { id: 5, name: "Книги Альбера Камю", owner: "superuser" },
     createdOn: "2022-10-19",
   }
 ];
