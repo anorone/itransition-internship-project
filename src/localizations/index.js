@@ -14,6 +14,15 @@ const enMessages = {
   'main.collections.heading': 'Largest collections',
   'main.collections.stat': 'Volume',
   'main.collections.link': 'View',
+  'main.collection.author': 'Author',
+  'main.collection.category': 'Category',
+  'main.collection.table.title': 'Collection items',
+  'main.collection.table.col-1': 'Name',
+  'main.collection.table.col-2': 'Tags',
+  'main.collection.table.col-3': 'Created on',
+  'main.collection.table.filter.day': 'last 24 hours',
+  'main.collection.table.filter.week': 'week',
+  'main.collection.table.filter.month': 'month',
   'footer.quote': 'Collecting means being able to live in the past. (Albert Camus)',
 };
 
@@ -33,6 +42,15 @@ const ruMessages = {
   'main.collections.heading': 'Крупнейшие коллекции',
   'main.collections.stat': 'Количество',
   'main.collections.link': 'Смотреть',
+  'main.collection.author': 'Автор',
+  'main.collection.category': 'Категория',
+  'main.collection.table.title': 'Экземпляры коллекции',
+  'main.collection.table.col-1': 'Название',
+  'main.collection.table.col-2': 'Тэги',
+  'main.collection.table.col-3': 'Добавлено',
+  'main.collection.table.filter.day': 'за последние 24 часа',
+  'main.collection.table.filter.week': 'неделю',
+  'main.collection.table.filter.month': 'месяц',
   'footer.quote': 'Коллекционировать — значит уметь жить прошлым. (Альбер Камю)',
 };
 
