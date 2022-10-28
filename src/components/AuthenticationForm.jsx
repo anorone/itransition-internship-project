@@ -4,11 +4,11 @@ import { useState } from 'react';
 import { FormattedMessage } from 'react-intl';
 
 const Banner = () => {
-  const [authType, setAuthType] = useState('login');
+  const [authType, setAuthType] = useState('signup');
 
   const handleLinkClick = (e) => {
     e.preventDefault();
-    setAuthType('signup');
+    setAuthType('login');
   };
 
   const handleRadioChange = (e) => setAuthType(e.target.value);
@@ -31,11 +31,11 @@ const Banner = () => {
         size="small"
         onChange={handleRadioChange}
       >
-        <Radio.Button value="login">
-          <FormattedMessage id="main.banner.auth-form.login"/>
-        </Radio.Button>
         <Radio.Button value="signup">
           <FormattedMessage id="main.banner.auth-form.signup"/>
+        </Radio.Button>
+        <Radio.Button value="login">
+          <FormattedMessage id="main.banner.auth-form.login"/>
         </Radio.Button>
       </Radio.Group>
 
