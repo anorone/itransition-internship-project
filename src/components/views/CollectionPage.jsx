@@ -70,7 +70,7 @@ const CollectionPage = () => {
         <FormattedMessage id="main.collection.author" />: {collection.owner}
       </span>
       <span className="coll-section__category">
-        <FormattedMessage id="main.collection.category" />: {collection.type}
+        <FormattedMessage id="main.collection.category" />: {collection.category}
       </span>
       <p>{collection.description}</p>
       <Table

@@ -1,6 +1,7 @@
 const items = [
   {
     id: 1,
+    type: "item",
     name: "Носки белые",
     description: "",
     tags: [],
@@ -10,6 +11,7 @@ const items = [
   },
   {
     id: 2,
+    type: "item",
     name: "Носки серые",
     description: "",
     tags: [],
@@ -19,6 +21,7 @@ const items = [
   },
   {
     id: 3,
+    type: "item",
     name: "Первый человек",
     description: "Неоконченный автобиографический роман Альбера Камю.",
     tags: ["биография", "Камю"],
@@ -28,6 +31,7 @@ const items = [
   },
   {
     id: 4,
+    type: "item",
     name: "Посторонний",
     description: "Дебютный роман Альбера Камю.",
     tags: ["камю", "французская литература"],
@@ -37,6 +41,7 @@ const items = [
   },
   {
     id: 5,
+    type: "item",
     name: "Чума",
     description: "Роман французского писателя Альбера Камю.",
     tags: ["книги", "Камю", "классика", "популярное", "литература"],
