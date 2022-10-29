@@ -4,14 +4,14 @@ import LanguageSwitcher from './LanguageSwitcher';
 import ThemeSwitcher from './ThemeSwitcher';
 import SearchForm from './SearchForm';
 
-const Header = ({ toggleThemes, setLanguage }) => (
+const Header = ({ toggleThemes, toggleLanguages }) => (
   <header className="header">
     <div className="container">
       <div className="header__inner">
         <Link className="header__link" to="/">
           <HomeFilled className="header__icon" />
         </Link>
-        <LanguageSwitcher setLanguage={setLanguage} />
+        <LanguageSwitcher toggleLanguages={toggleLanguages} />
         <ThemeSwitcher toggleThemes={toggleThemes} />
         <SearchForm />
       </div>

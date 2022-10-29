@@ -13,16 +13,25 @@ const messages = {
 };
 
 const App = () => {
-  const [language, setLanguage] = useState('en');
-  const [theme, setTheme] = useState('dark');
+  const [language, setLanguage] = useState(localStorage.getItem('app-lang') ?? 'en');
+  const [theme, setTheme] = useState(localStorage.getItem('app-theme') ?? 'dark');
 
-  const toggleThemes = () => setTheme(theme === 'dark' ? 'light' : 'dark');
+  const toggleLanguages = (lang) => {
+    setLanguage(lang);
+    localStorage.setItem('app-lang', lang);
+  };
+
+  const toggleThemes = () => {
+    const color = (theme === 'dark' ? 'light' : 'dark');
+    setTheme(color);
+    localStorage.setItem('app-theme', color);
+  };
 
   return (
     <BrowserRouter>
       <IntlProvider locale={language} messages={messages[language]} >
         <div className={`${theme} app`}>
-          <Header toggleThemes={toggleThemes} setLanguage={setLanguage} />
+          <Header toggleThemes={toggleThemes} toggleLanguages={toggleLanguages} />
           <Main />
           <Footer />
         </div>
