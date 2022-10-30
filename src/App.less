@@ -382,10 +382,39 @@ a:visited {
   font-size: 14px;
 }
 
+.likes__button {
+  width: auto;
+  height: auto;
+  padding: 0;
+  border: none;
+  margin-right: 8px;
+  color: inherit;
+  cursor: not-allowed;
+}
+
+.likes__button svg {
+  font-size: 18px;
+}
+
 .item-section__image {
   box-shadow: 0 0 8px #777;
   object-fit: contain;
   object-position: center;
+}
+
+.comments-list {
+  max-width: 580px;
+  margin: 0 auto;
+  color: inherit;
+}
+
+.item-section__comments {
+  font-size: 16px;
+  text-align: left;
+}
+
+.comments-list__item {
+  font-size: 18px;
 }
 
 .tags-cloud {
@@ -565,10 +594,26 @@ a:visited {
   width: auto;
 }
 
+.ant-comment-content-author span{
+  font-size: 13px;
+}
+
+.ant-comment-content-detail {
+  font-size: 17px;
+}
+
+.light .ant-list-split .ant-list-header {
+  border-bottom-color: #777;
+}
+
 .dark .ant-statistic-title {
   color: rgba(255, 255, 255, .45);
 }
 
 .dark .ant-statistic-content {
   color: rgba(255, 255, 255, .85);
+}
+
+.dark .ant-comment-content-author span {
+  color: rgba(255, 255, 255, .45);
 }

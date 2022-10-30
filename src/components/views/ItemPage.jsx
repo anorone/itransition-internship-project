@@ -1,18 +1,22 @@
 import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
-import { Tag, Image } from 'antd';
+import { Tag, Image, Button } from 'antd';
+import { HeartOutlined } from '@ant-design/icons';
+import Comments from '../Comments';
 import getData from '../../utils/fetch';
 
 const ItemPage = () => {
   const [item, setItem] = useState({});
   const [tags, setTags] = useState([]);
+  const [comments, setComments] = useState([]);
   const { id } = useParams();
 
   useEffect(() => {
     getData(`/.netlify/functions/item/${id}`, (item) => {
       setItem(item);
       setTags(item.tags);
+      setComments(item.comments);
     });
   }, [id]);
 
@@ -36,6 +40,10 @@ const ItemPage = () => {
             <FormattedMessage id="main.item.info.end" />
             <span> '{item.collection?.owner}' </span>
           </p>
+          <div className="item-section__likes likes">
+            <Button className="likes__button" type="link" icon={<HeartOutlined />} />
+            <span className="likes__count">{item.likesCount}</span>
+          </div>
         </div>
         <Image
           className="item-section__image"
@@ -44,6 +52,7 @@ const ItemPage = () => {
           height={560}
         />
       </div>
+      <Comments className="item-section__comments" comments={comments} />
     </section>
   );
 };
