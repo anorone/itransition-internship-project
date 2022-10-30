@@ -16,8 +16,8 @@ const ItemPage = () => {
     });
   }, [id]);
 
-  const tagsList = tags.map((tag) => (
-    <Tag className="item-section__tag" color="#4bb">#{tag}</Tag>
+  const tagsList = tags.map((tag, i) => (
+    <Tag className="item-section__tag" color="#4bb" key={i}>#{tag}</Tag>
   ));
 
   return (

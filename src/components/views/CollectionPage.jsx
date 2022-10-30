@@ -24,8 +24,8 @@ const CollectionPage = () => {
       title: <FormattedMessage id="main.collection.table.col-2" />,
       dataIndex: 'tags',
       key: 'tags',
-      render: (tags) => tags.map((tag) => (
-        <Tag className="items-table__tag" color="#777" key={tag}>
+      render: (tags) => tags.map((tag, i) => (
+        <Tag className="items-table__tag" color="#777" key={i}>
           #{tag}
         </Tag>
       ))
@@ -79,6 +79,7 @@ const CollectionPage = () => {
         title={() => <FormattedMessage id="main.collection.table.title" />}
         dataSource={collection.items}
         columns={tableColumns}
+        rowKey={({ id }) => id.toString()}
       />
     </section>
   );

@@ -17,8 +17,8 @@ const TagsCloud = () => {
     })
   }, []);
 
-  const tagsList = shuffle(tags).map((tag) => (
-    <Link to={`/search?query=${tag}`}>
+  const tagsList = shuffle(tags).map((tag, i) => (
+    <Link to={`/search?query=${tag}`} key={i}>
       <Tag className="tags-cloud__tag" color="#8b8b8b">#{tag}</Tag>
     </Link>
   ));
