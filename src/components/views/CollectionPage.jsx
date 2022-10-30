@@ -34,6 +34,7 @@ const CollectionPage = () => {
       title: <FormattedMessage id="main.collection.table.col-3" />,
       dataIndex: 'createdOn',
       key: 'createdOn',
+      render: (date) => <time dateTime={date}>{date}</time>,
       sorter: (a, b) => Date.parse(a.createdOn) - Date.parse(b.createdOn),
       defaultSortOrder: 'descend',
       filters: [

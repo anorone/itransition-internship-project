@@ -32,7 +32,7 @@ const ItemPage = () => {
           <p className="item-section__description">{item.description}</p>
           <p className="item-section__extra">
             <FormattedMessage id="main.item.info.start" />
-            <time datetime={item.createdOn}> {item.createdOn} </time>
+            <time dateTime={item.createdOn}> {item.createdOn} </time>
             <FormattedMessage id="main.item.info.end" />
             <span> '{item.collection?.owner}' </span>
           </p>

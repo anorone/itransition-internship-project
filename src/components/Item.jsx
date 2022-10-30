@@ -11,9 +11,11 @@ const Item = ({ props: { id, name, description, url, collection, owner, createdO
       {collection.name}
     </Link>
     <p className="item__info">
-      <FormattedMessage id="main.items.info.start" /> '{collection.owner}'
+      <FormattedMessage id="main.items.info.start" />
+      <span> '{collection.owner}'</span>
       <br />
-      <FormattedMessage id="main.items.info.end" /> {createdOn}
+      <FormattedMessage id="main.items.info.end" />
+      <time dateTime={createdOn}>{createdOn}</time>
     </p>
   </div>
 );
