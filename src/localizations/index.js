@@ -26,7 +26,7 @@ const enMessages = {
   'main.collection.table.filter.day': 'last 24 hours',
   'main.collection.table.filter.week': 'week',
   'main.collection.table.filter.month': 'month',
-  'footer.quote': 'Collecting means being able to live in the past. (Albert Camus)',
+  'footer.quote': 'Collecting means being able to live in the past. (Albert\u00a0Camus)',
 };
 
 const ruMessages = {
@@ -57,7 +57,7 @@ const ruMessages = {
   'main.collection.table.filter.day': 'за последние 24 часа',
   'main.collection.table.filter.week': 'неделю',
   'main.collection.table.filter.month': 'месяц',
-  'footer.quote': 'Коллекционировать — значит уметь жить прошлым. (Альбер Камю)',
+  'footer.quote': 'Коллекционировать — значит уметь жить прошлым. (Альбер\u00a0Камю)',
 };
 
 export { enMessages, ruMessages };
