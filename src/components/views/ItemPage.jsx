@@ -52,7 +52,7 @@ const ItemPage = () => {
           height={560}
         />
       </div>
-      <Comments className="item-section__comments" comments={comments} />
+      <Comments comments={comments} />
     </section>
   );
 };

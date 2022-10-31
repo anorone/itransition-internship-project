@@ -1,9 +1,9 @@
 import { FormattedMessage } from 'react-intl';
 import { List, Comment, Avatar } from 'antd';
 
-const Comments = ({ className, comments }) => (
+const Comments = ({ comments }) => (
   <List
-    className={`${className} comments-list`}
+    className="item-section__comments comments-list"
     header={(
       <span>
         <FormattedMessage id="main.item.comments.count" />: {comments.length}
