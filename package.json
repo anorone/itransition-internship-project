@@ -20,6 +20,7 @@
   "scripts": {
     "lint": "eslint src/",
     "start": "craco start",
+    "dev": "netlify dev",
     "prebuild": "npm run test",
     "build": "craco build",
     "test": "react-scripts test",
