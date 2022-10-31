@@ -2,16 +2,21 @@ import { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import { Table, Tag } from 'antd';
+import Spinner from '../Spinner';
 import getData from '../../utils/fetch';
 
 const CollectionPage = () => {
   const [collection, setCollection] = useState({});
+  const [isLoading, setLoadingStatus] = useState(true);
   const { id } = useParams();
 
   useEffect(() => window.scrollTo(0, 0), []);
 
   useEffect(() => {
-    getData(`/.netlify/functions/collection/${id}`, setCollection);
+    getData(`/.netlify/functions/collection/${id}`, (coll) => {
+      setCollection(coll);
+      setLoadingStatus(false);
+    });
   }, [id]);
 
   const tableColumns = [
@@ -65,7 +70,7 @@ const CollectionPage = () => {
     },
   ];
 
-  return (
+  const collectionPage = (
     <section className="section coll-section">
       <h1 className="coll-section__heading heading heading_size_m">{collection.name}</h1>
       <img className="coll-section__image" src={collection.url} alt={collection.name} height={320} />
@@ -85,6 +90,8 @@ const CollectionPage = () => {
       />
     </section>
   );
+
+  return isLoading ? Spinner : collectionPage;
 };
 
 export default CollectionPage;

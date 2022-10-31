@@ -2,16 +2,22 @@ import { useState, useEffect } from 'react';
 import { useSearchParams, Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import { List } from 'antd';
+import Spinner from '../Spinner';
 import getData from '../../utils/fetch';
 
 const SearchResults = () => {
   const [searchResults, setSearchResults] = useState([]);
   const [searchParams] = useSearchParams();
+  const [isLoading, setLoadingStatus] = useState(true);
   const query = searchParams.get('query');
 
   useEffect(() => {
-    getData(`/.netlify/functions/search?query=${query}`, setSearchResults);
-  }, [query]);
+    setLoadingStatus(true);
+    getData(`/.netlify/functions/search?query=${query}`, (results) => {
+      setSearchResults(results);
+      setLoadingStatus(false);
+    });
+  }, [query, setLoadingStatus]);
 
   const listItems = searchResults.map((item, i) => {
     const orderNumber = i + 1;
@@ -23,7 +29,7 @@ const SearchResults = () => {
     )
   });
 
-  return (
+  const searchResultsPage = (
     <section className="section search-results">
       <h1 className="sr-only">Search results</h1>
       <p className="search-results__message">
@@ -37,6 +43,8 @@ const SearchResults = () => {
       />
     </section>
   );
+
+  return isLoading ? Spinner : searchResultsPage;
 };
 
 export default SearchResults;

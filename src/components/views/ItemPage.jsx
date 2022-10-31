@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { FormattedMessage } from 'react-intl';
 import { Tag, Image, Button } from 'antd';
 import { HeartOutlined } from '@ant-design/icons';
+import Spinner from '../Spinner';
 import Comments from '../Comments';
 import getData from '../../utils/fetch';
 
@@ -10,6 +11,7 @@ const ItemPage = () => {
   const [item, setItem] = useState({});
   const [tags, setTags] = useState([]);
   const [comments, setComments] = useState([]);
+  const [isLoading, setLoadingStatus] = useState(true);
   const { id } = useParams();
 
   useEffect(() => window.scrollTo(0, 0), []);
@@ -19,6 +21,7 @@ const ItemPage = () => {
       setItem(item);
       setTags(item.tags);
       setComments(item.comments);
+      setLoadingStatus(false);
     });
   }, [id]);
 
@@ -26,7 +29,7 @@ const ItemPage = () => {
     <Tag className="item-section__tag" color="#4bb" key={i}>#{tag}</Tag>
   ));
 
-  return (
+  const itemPage = (
     <section className="section item-section">
       <div className="item-section__inner">
         <div className="item-section__info">
@@ -58,6 +61,8 @@ const ItemPage = () => {
       <Comments comments={comments} />
     </section>
   );
+
+  return isLoading ? Spinner : itemPage;
 };
 
 export default ItemPage;
