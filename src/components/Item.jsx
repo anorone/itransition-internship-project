@@ -15,7 +15,7 @@ const Item = ({ props: { id, name, description, url, collection, owner, createdO
       <span> '{collection.owner}'</span>
       <br />
       <FormattedMessage id="main.items.info.end" />
-      <time dateTime={createdOn}>{createdOn}</time>
+      <time dateTime={createdOn}> {createdOn}</time>
     </p>
   </div>
 );
