@@ -49,7 +49,8 @@ const ItemPage = () => {
         </div>
         <Image
           className="item-section__image"
-          src={item.url}
+          src={item.url || '/images/no-image.jpg'}
+          preview={item.url ? true : false}
           alt={item.description}
           height={560}
         />
