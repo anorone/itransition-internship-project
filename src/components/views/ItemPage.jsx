@@ -12,6 +12,8 @@ const ItemPage = () => {
   const [comments, setComments] = useState([]);
   const { id } = useParams();
 
+  useEffect(() => window.scrollTo(0, 0), []);
+
   useEffect(() => {
     getData(`/.netlify/functions/item/${id}`, (item) => {
       setItem(item);

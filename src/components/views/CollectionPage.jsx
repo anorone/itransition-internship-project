@@ -8,6 +8,8 @@ const CollectionPage = () => {
   const [collection, setCollection] = useState({});
   const { id } = useParams();
 
+  useEffect(() => window.scrollTo(0, 0), []);
+
   useEffect(() => {
     getData(`/.netlify/functions/collection/${id}`, setCollection);
   }, [id]);
